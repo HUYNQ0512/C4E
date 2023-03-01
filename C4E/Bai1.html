@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai1</title>
+<style>
+    input{
+        margin: 10px;
+    }
+</style>
+</head>
+    
+<body>
+    <h1>Exercise 1</h1>
+    <form>
+      Input first number  <input type="number" id="x" placeholder="Number a"/>
+        <br/>
+      Input second number  <input type="number" id="y" placeholder="Number b"/>
+        <br/>
+        <input type="button" value="Result" onClick="calSum()"/>
+    </form>
+    <p id="result"></p>
+    <script>
+        function calSum()
+        {
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let result = "";
+            let sum = 0;
+            for(x; x <= y; x++)
+            {
+                sum += Number(x);
+                let tmp = x + (x == y ? " = " : " + ");
+                result += tmp;
+            }
+            let r = document.getElementById("result");
+            r.append(result + sum);
+        }
+    </script>
+</body>
+</html>

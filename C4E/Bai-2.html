@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+    <form>
+       Input number of rows <input type="number" id="row" placeholder="Rows"/>
+        <input type="button" onClick="drawPyramid()" value="Draw"/>
+    </form>
+    <div id="result"></div>
+    <script>
+        function drawPyramid() 
+        {
+            let numRows = document.getElementById("row").value;
+            let r = document.getElementById("result");
+            r.innerHTML="";
+            for (let i = 1; i <= numRows; i++) 
+            {
+                let row = '';
+                let div = document.createElement("div");
+                 let br = document.createElement("br");
+                for (let k = 1; k <= i; k++) 
+                {
+                    row += '*';
+            
+                }
+                div.append(row);
+                 r.append(div);
+            }
+        }
+    </script>
+</body>
+</html>
